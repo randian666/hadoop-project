@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * hdfs文件操作
+ *windows从hdfs中下载文件需要把hadoop.dll放入c:\windows\system32目录中
  * Created by liuxun on 2017/6/28.
  */
 public class HadoopFile {
@@ -21,7 +22,9 @@ public class HadoopFile {
 
     public static void main(String[] args) {
         HadoopFile hadoopFile=new HadoopFile();
-        hadoopFile.sendFile("/user/hadoop/h1","E:\\work\\MyArrayList.java");
+        hadoopFile.sendFile("/user/hadoop/h1","E:\\count.txt");
+        hadoopFile.downloadFile("/user/hadoop/h1/count.txt","D:\\");
+        hadoopFile.delFile("/user/hadoop/h1/count.txt");
     }
     public boolean sendFile(String path,String localfile){
         File file=new File(localfile);
