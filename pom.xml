@@ -7,7 +7,9 @@
     <groupId>com.hadoop.project</groupId>
     <artifactId>hadoop-project</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <properties>
+        <corenlp.version>3.6.0</corenlp.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
@@ -25,7 +27,42 @@
             <version>2.7.3</version>
         </dependency>
 
+        <!-- Spark dependency -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+        <!--Stanford Nlp 自然语言处理工具-->
+        <!--<dependency>-->
+            <!--<groupId>edu.stanford.nlp</groupId>-->
+            <!--<artifactId>stanford-corenlp</artifactId>-->
+            <!--<version>${corenlp.version}</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>edu.stanford.nlp</groupId>-->
+            <!--<artifactId>stanford-corenlp</artifactId>-->
+            <!--<version>${corenlp.version}</version>-->
+            <!--<classifier>models</classifier>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>edu.stanford.nlp</groupId>-->
+            <!--<artifactId>stanford-corenlp</artifactId>-->
+            <!--<version>${corenlp.version}</version>-->
+            <!--<classifier>models-chinese</classifier>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <artifactId>fastjson</artifactId>
+            <groupId>com.alibaba</groupId>
+            <version>1.2.9</version>
+        </dependency>
     </dependencies>
+
 
     <build>
 <plugins>
@@ -33,14 +70,14 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <version>2.3.2</version>
-        <configuration>
-            <archive>
-                <manifest>
-                    <addClasspath>true</addClasspath>
-                    <mainClass>com.hadoop.project.demo.HadoopDemo</mainClass>
-                </manifest>
-            </archive>
-        </configuration>
+        <!--<configuration>-->
+            <!--<archive>-->
+                <!--<manifest>-->
+                    <!--<addClasspath>true</addClasspath>-->
+                    <!--<mainClass>com.hadoop.project.demo.MaxTemperature</mainClass>-->
+                <!--</manifest>-->
+            <!--</archive>-->
+        <!--</configuration>-->
     </plugin>
 </plugins>
     </build>

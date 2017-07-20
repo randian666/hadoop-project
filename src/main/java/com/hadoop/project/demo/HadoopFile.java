@@ -20,12 +20,12 @@ public class HadoopFile {
         conf.set("fs.hdfs.impl","org.apache.hadoop.hdfs.DistributedFileSystem");
     }
 
-    public static void main(String[] args) {
-        HadoopFile hadoopFile=new HadoopFile();
-        hadoopFile.sendFile("/user/hadoop/h1","E:\\count.txt");
-        hadoopFile.downloadFile("/user/hadoop/h1/count.txt","D:\\");
-        hadoopFile.delFile("/user/hadoop/h1/count.txt");
-    }
+//    public static void main(String[] args) {
+//        HadoopFile hadoopFile=new HadoopFile();
+//        hadoopFile.sendFile("/user/hadoop/ncdc","E:\\hadoopdata\\1902\\1902.txt");
+////        hadoopFile.downloadFile("/user/hadoop/h1/count.txt","D:\\");
+////        hadoopFile.delFile("/user/hadoop/h1/count.txt");
+//    }
     public boolean sendFile(String path,String localfile){
         File file=new File(localfile);
         if (!file.isFile()) {

@@ -14,11 +14,11 @@ import java.io.InputStreamReader;
  * Created by liuxun on 2017/6/28.
  */
 public class HadoopDemo {
-    public static void main(String[] args) {
-        write();
-        exists();
-        reader();
-    }
+//    public static void main(String[] args) {
+//        write();
+//        exists();
+//        reader();
+//    }
     //写入文件
     private static void write(){
         try {
